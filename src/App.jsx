@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { auth } from './config/firebaseConfig.js';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import "./App.css"
+import { SignJWT } from 'jose';
 
 export default function App() {
   const [email, setEmail] = useState('');
@@ -11,7 +12,6 @@ export default function App() {
     evento.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, senha);
-
       const secretKey = new TextEncoder().encode('minhaChaveSecreta');
 
       const token = await new SignJWT({ user: 'admin' })

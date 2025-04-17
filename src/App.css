@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #844bd422;
+    background-color: #f4ecff;
   }
   
   h2 {
@@ -41,6 +41,26 @@ body {
     outline: none;
   }
   
+  .login-box button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #8e44ad, #a569bd);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.3);
+  }
+  
+  .login-box button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 14px rgba(142, 68, 173, 0.4);
+    background: linear-gradient(90deg, #7d3c98, #b57edc);
+  }  
+
   button {
     width: 100%;
     max-width: 300px;
@@ -57,5 +77,41 @@ body {
   
   button:hover {
     background-color: #50239c;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4ecff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-container h1 {
+    font-size: 2.5rem;
+    color: #5f27cd;
+    margin-bottom: 20px;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    background-color: #8e44ad;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #6c3483;
   }
   

@@ -3,12 +3,12 @@ import { auth } from './config/firebaseConfig.js';
 import { signInWithEmailAndPassword } from 'firebase/auth'; 
 import { SignJWT } from 'jose';
 import './App.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function App() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-
+  const nav = useNavigate();
     const autenticarComFirebase = async (evento) => {
         evento.preventDefault();
         try {
@@ -27,6 +27,7 @@ export default function App() {
             localStorage.setItem('token', token);
 
             alert('Logado com sucesso!');
+            nav("/");
         } catch (err) {
             alert('Erro no processo: ' + err.message);
         }

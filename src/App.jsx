@@ -8,7 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 export default function App() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
-  const nav = useNavigate();
+    const nav = useNavigate();
     const autenticarComFirebase = async (evento) => {
         evento.preventDefault();
         try {
